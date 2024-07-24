@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="bg-midnight py-8">
-            <div class="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="container py-4 mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <FooterWidget heading="Chat box">
                     <!-- BEGIN CBOX - www.cbox.ws - v4.3 -->
                     <div id="cboxdiv" style="position: relative; margin: 0 auto; width: 100%; font-size: 0; line-height: 0;">
@@ -11,7 +11,7 @@
                     <!-- END CBOX -->	
                 </FooterWidget>
                 <FooterWidget heading="Affiliates">
-                    
+                    <FooterAffiliates />
                 </FooterWidget>
                 <FooterWidget heading="Link back">
                     
