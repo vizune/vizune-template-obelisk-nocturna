@@ -1,5 +1,15 @@
+<script setup lang="ts">
+  useHead({
+    title: 'Vizune.com',
+    meta: [
+      { name: 'description', content: 'Vizune.com' }
+    ]
+  })
+</script>
 <template>
   <div>
-    <h1 class="m-5">Vue.js</h1>
+    <IconSprite />
+    <nuxt-page />
+    <SocialFooter />
   </div>
 </template>

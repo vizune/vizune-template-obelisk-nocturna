@@ -8,6 +8,24 @@ export default {
     "./app.vue",
     "./error.vue",
   ],
-  theme: {},
+  theme: {
+    extend: {
+      backgroundImage: {
+        'header': "url('/header.jpg')"
+      },
+      colors: {
+        'midnight': '#020006',
+        'charcoal': '#030309',
+        'ocean': '#90c2f5',
+        'carmine': '#cb1140',
+        'peach': '#ffac85',
+        'ice': '#bbffff'
+      },
+      fontFamily: {
+        kanit: ['"Kanit"', "sans-serif"],
+        tiny: ['"Tiny5"', "sans-serif"]
+      },
+    },
+  },
   plugins: [],
 }

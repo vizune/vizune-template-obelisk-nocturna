@@ -9,6 +9,16 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
+  googleFonts: {
+    display: 'swap',
+    families: {
+      Tiny5: true,
+      Kanit: {
+        wght: [100, 200, 300, 400, 700],
+        ital: [100, 200, 300, 400, 700]
+      },
+    }
+  },
   postcss: {
     plugins: {
       tailwindcss: {},
