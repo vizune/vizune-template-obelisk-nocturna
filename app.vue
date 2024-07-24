@@ -10,6 +10,6 @@
   <div>
     <IconSprite />
     <nuxt-page />
-    <SocialFooter />
+    <Footer />
   </div>
 </template>

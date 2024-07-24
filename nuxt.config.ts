@@ -6,13 +6,13 @@ export default defineNuxtConfig({
   components: [
     {
       path: '~/components',
-      pathPrefix: false,
+      pathPrefix: true,
     },
   ],
   googleFonts: {
     display: 'swap',
     families: {
-      Tiny5: true,
+      Forum: true,
       Kanit: {
         wght: [100, 200, 300, 400, 700],
         ital: [100, 200, 300, 400, 700]

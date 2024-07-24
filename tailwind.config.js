@@ -23,7 +23,7 @@ export default {
       },
       fontFamily: {
         kanit: ['"Kanit"', "sans-serif"],
-        tiny: ['"Tiny5"', "sans-serif"]
+        forum: ['"Forum"', "serif"]
       },
     },
   },
