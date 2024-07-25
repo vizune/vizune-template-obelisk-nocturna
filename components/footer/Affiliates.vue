@@ -69,7 +69,7 @@ const affiliates = [
 </script>
 
 <template>
-    <div class="flex flex-wrap justify-center gap-4 my-6 px-6">
+    <div class="grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-center gap-4 my-6 px-6">
         <a 
             v-for="link in affiliates" 
             :href="link.url" 

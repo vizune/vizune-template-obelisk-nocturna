@@ -10,6 +10,7 @@
                                 c0,0-2.875,3.75-3.25,3.75s-21.375-8.375-21.25-8.875s1.375-15.125,2.375-16.625S247.687,180.941,247.687,180.941z M330,257.898
                                 H223.333v-52.065H349.79L330,257.898z"></path>
         </svg>
+        <span class="uppercase font-forum absolute text-white text-3xl tracking-wider">Vizune</span>
 	</div>
 </template>
 
@@ -20,5 +21,21 @@ svg {
     left: calc(50% + 5px);
     transform: translate(-50%,-50%);
     height: 150px;
+}
+span {
+    top: 88%;
+    font-size: 5rem;
+    padding: 0 2rem;
+    -webkit-animation: glow 2s ease-in-out infinite alternate 1s;
+    animation: glow 2s ease-in-out infinite alternate 1s;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #e60073, 0 0 20px #e60073, 0 0 20px #e60073, 0 0 20px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 20px #ff4da6, 0 0 20px #ff4da6, 0 0 30px #ff4da6, 0 0 30px #ff4da6, 0 0 20px #ff4da6, 0 0 20px #ff4da6;
+  }
 }
 </style>
