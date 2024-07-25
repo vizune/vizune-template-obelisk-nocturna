@@ -9,6 +9,7 @@
 <template>
   <div>
     <IconSprite />
+    <Header />
     <nuxt-page />
     <Footer />
   </div>
