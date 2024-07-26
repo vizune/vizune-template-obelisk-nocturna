@@ -69,14 +69,14 @@ const affiliates = [
 </script>
 
 <template>
-    <div class="grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-center gap-4 my-6 px-6">
+    <div class="grid grid-cols-3 sm:grid-cols-4 xl:grid-cols-5 justify-center gap-2 sm:gap-4 my-4 lg:px-6">
         <a 
             v-for="link in affiliates" 
             :href="link.url" 
             target="_blank" 
             class="flex items-center justify-center relative border border-ocean h-[39px] w-[96px] text-center text-midnight hover:bg-ocean"
         >
-            <span class="text-xs uppercase tracking-wide p-1">{{ link.name }}</span>
+            <span class="text-xs uppercase tracking-wider p-1">{{ link.name }}</span>
             <img 
                 :src="link.button" 
                 :alt="`Affiliate: ${link.name} button`" 

@@ -19,7 +19,9 @@ export default {
         'ocean': '#90c2f5',
         'carmine': '#cb1140',
         'peach': '#ffac85',
-        'ice': '#bbffff'
+        'purple': '#655CF9',
+        'ice': '#bbffff',
+        'white': '#f2f2f2'
       },
       fontFamily: {
         kanit: ['"Kanit"', "sans-serif"],

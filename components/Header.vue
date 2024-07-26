@@ -1,6 +1,7 @@
 <template>
-    <div class="flex justify-center container mx-auto relative">
-        <img src="/header.jpg" alt="" />
+    <div class="flex flex-wrap justify-center xl:container relative mx-auto mb-8 xl:px-4 h-[500px] xl:h-auto overflow-hidden">
+      <div class="relative w-full">
+        <img src="/header.jpg" alt="" height="500" width="1500px" class="absolute xl:static max-w-none xl:max-w-full left-0" />
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 540 691.167" enable-background="new 0 0 540 691.167" xml:space="preserve" fill="#fff">
             <path d="M531.236,0.015l-261.28,692.122L7.591-0.787h64.825l197.351,519.682C271.466,514.46,465.656,0.015,465.656,0.015H531.236z"></path>
             <path class="logo-circle" d="M337.625,137.267c0,17.834-14.457,32.292-32.292,32.292s-32.292-14.457-32.292-32.292s14.457-32.292,32.292-32.292
@@ -10,7 +11,10 @@
                                 c0,0-2.875,3.75-3.25,3.75s-21.375-8.375-21.25-8.875s1.375-15.125,2.375-16.625S247.687,180.941,247.687,180.941z M330,257.898
                                 H223.333v-52.065H349.79L330,257.898z"></path>
         </svg>
-        <span class="uppercase font-forum absolute text-white text-3xl tracking-wider">Vizune</span>
+      </div>
+      <span class="uppercase font-forum absolute bottom-0 text-[5rem] xl:text-[4.5rem] text-white tracking-wider">
+        Vizune
+      </span>
 	</div>
 </template>
 
@@ -23,11 +27,9 @@ svg {
     height: 150px;
 }
 span {
-    top: 88%;
-    font-size: 5rem;
     padding: 0 2rem;
-    -webkit-animation: glow 2s ease-in-out infinite alternate 1s;
-    animation: glow 2s ease-in-out infinite alternate 1s;
+    -webkit-animation: glow 1.5s ease-in-out infinite alternate 1s;
+    animation: glow 1.5s ease-in-out infinite alternate 1s;
 }
 
 @keyframes glow {

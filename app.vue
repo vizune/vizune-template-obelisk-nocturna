@@ -10,7 +10,9 @@
   <div>
     <IconSprite />
     <Header />
-    <nuxt-page />
+    <Content>
+      <nuxt-page />
+    </Content>
     <Footer />
   </div>
 </template>
