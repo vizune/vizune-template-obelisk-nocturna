@@ -9,10 +9,13 @@
 <template>
   <div>
     <IconSprite />
-    <Header />
-    <Content>
-      <nuxt-page />
-    </Content>
+    <div class="h-screen flex flex-col justify-between mb-[5rem]">
+      <div class="grow-1">
+        <HeadingOne>Obelisk: Nocturna</HeadingOne>
+      </div>
+      <Header />
+    </div>
+    <nuxt-page />
     <Footer />
   </div>
 </template>
