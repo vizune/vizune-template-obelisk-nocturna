@@ -1,8 +1,27 @@
+<script setup>
+import { ref } from 'vue'
+
+const header = ref(null)
+
+const scrollToHeader = () => {
+  header.value.scrollIntoView({ behavior: "smooth" });
+};
+</script>
+
 <template>
-    <div class="flex flex-wrap justify-center relative mx-auto h-[500px] w-full overflow-hidden">
+    <div class="flex flex-wrap justify-center relative mx-auto h-[500px] w-full overflow-hidden" ref="header">
       <div class="relative w-full">
         <img src="/header-long.jpg" alt="" height="500" width="2000px" class="h-[500px] object-cover object-left xl:object-center" />
-        <svg class="lg:cursor-pointer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 540 691.167" enable-background="new 0 0 540 691.167" xml:space="preserve" fill="#fff">
+        <svg 
+          class="lg:cursor-pointer" 
+          xmlns="http://www.w3.org/2000/svg" 
+          xmlns:xlink="http://www.w3.org/1999/xlink" 
+          x="0px" y="0px" viewBox="0 0 540 691.167" 
+          enable-background="new 0 0 540 691.167" 
+          xml:space="preserve" 
+          fill="#fff"
+          @click="scrollToHeader"
+        >
             <path d="M531.236,0.015l-261.28,692.122L7.591-0.787h64.825l197.351,519.682C271.466,514.46,465.656,0.015,465.656,0.015H531.236z"></path>
             <path class="logo-circle" d="M337.625,137.267c0,17.834-14.457,32.292-32.292,32.292s-32.292-14.457-32.292-32.292s14.457-32.292,32.292-32.292
                                 S337.625,119.433,337.625,137.267z"></path>
@@ -22,9 +41,14 @@
 svg {
     position: absolute;
     top: 50%;
-    left: calc(50% + 5px);
+    left: calc(50% + 4px);
     transform: translate(-50%,-50%);
     height: 150px;
+    transition: transform .25s ease-in-out;
+    transform-origin: center;
+}
+svg:hover {
+  transform: scale(1.1) translate(-45%,-40%);
 }
 span {
     padding: 0 2rem;
