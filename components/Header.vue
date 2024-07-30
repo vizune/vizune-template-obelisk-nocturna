@@ -11,9 +11,9 @@ const scrollToHeader = () => {
 <template>
     <div class="flex flex-wrap justify-center relative mx-auto h-[500px] w-full overflow-hidden" ref="header">
       <div class="relative w-full">
-        <img src="/header-long.jpg" alt="" height="500" width="2000px" class="h-[500px] object-cover object-left xl:object-center" />
+        <img src="/header-long.png" alt="" height="500" width="2000px" class="h-[500px] object-cover object-left xl:object-center" />
         <svg 
-          class="lg:cursor-pointer" 
+          class="lg:cursor-pointer absolute top-1/4 lg:top-1/2" 
           xmlns="http://www.w3.org/2000/svg" 
           xmlns:xlink="http://www.w3.org/1999/xlink" 
           x="0px" y="0px" viewBox="0 0 540 691.167" 
@@ -39,8 +39,6 @@ const scrollToHeader = () => {
 
 <style scoped>
 svg {
-    position: absolute;
-    top: 50%;
     left: calc(50% + 4px);
     transform: translate(-50%,-50%);
     height: 150px;

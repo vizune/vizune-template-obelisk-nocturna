@@ -11,7 +11,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'header': "url('/header.jpg')"
+        'header': "url('/header-long.png')"
       },
       colors: {
         'midnight': '#020006',
