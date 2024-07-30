@@ -1,5 +1,5 @@
 <template>
-    <main class="container mx-auto pb-[5rem]">
+    <main class="Content container mx-auto pb-[5rem]">
         <div class="bg-white p-1 mx-4">
             <div class="border-4 border-midnight h-[500px] flex flex-col justify-between">
                 <div class="Corners-top"></div>

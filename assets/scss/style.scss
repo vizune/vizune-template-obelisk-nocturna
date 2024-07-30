@@ -6,9 +6,14 @@ body {
     background: #030309;
 }
 
+.Content a {
+    color: #cb1140;
+    text-decoration: underline;
+}
+
 blockquote {
     border-left: 4px solid #030309;
-    background: url('/blockquote.gif') no-repeat 5px center;
+    background: url('/blockquote.gif') no-repeat 5px top;
     background-size: 90px 110px;
     padding-left: 110px;
     min-height: 110px;
@@ -16,8 +21,11 @@ blockquote {
     flex-direction: column;
     justify-content: center;
     font-size: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 
     p {
+        font-size: 1.5rem;
         margin-bottom: .5rem;
     }
 }
