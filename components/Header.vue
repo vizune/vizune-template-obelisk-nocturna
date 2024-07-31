@@ -11,7 +11,12 @@ const scrollToHeader = () => {
 <template>
     <div class="flex flex-wrap justify-center relative mx-auto h-[500px] w-full overflow-hidden" ref="header">
       <div class="relative w-full">
-        <img src="/header-long.png" alt="" height="500" width="2000px" class="h-[500px] object-cover object-left xl:object-center" />
+        <picture>
+          <source media="(min-width: 75em)"
+              srcset="/header-long.png  1024w,
+                  /header.jpg  320w" />
+          <img src="/header.jpg" role="presentation" height="500" width="2000px" class="h-[500px] object-cover object-left xl:object-center" />
+        </picture>
         <svg 
           class="lg:cursor-pointer absolute top-1/4 lg:top-1/2" 
           xmlns="http://www.w3.org/2000/svg" 

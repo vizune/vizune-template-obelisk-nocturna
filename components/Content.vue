@@ -1,20 +1,20 @@
 <template>
-    <main class="Content container mx-auto pb-[5rem]">
+    <main class="Content container mx-auto pb-[3.5rem]">
         <div class="bg-white p-1 mx-4">
-            <div class="border-4 border-midnight h-[500px] flex flex-col justify-between">
-                <div class="Corners-top"></div>
-                <div class="p-6 grow-1">
+            <div class="Corners-top"></div>
+            <div class="border-4 border-midnight flex flex-col justify-between py-[4rem] md:py-6 md:pb-[8rem]">
+                <div class="px-6 md:px-[4rem] xl:px-[8rem] py-6 grow-1">
                     <slot />
-                </div>
-                <div class="Corners-bottom"></div>
+                </div> 
             </div>
+            <div class="Corners-bottom"></div>
         </div>
     </main>
 </template>
 
 <style lang="scss" scoped>
 $corner-size: 150px;
-$corner-offset: -3px;
+$corner-offset: 2px;
 
 .Corners {
     &-top {

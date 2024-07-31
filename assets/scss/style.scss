@@ -4,11 +4,48 @@
 
 body {
     background: #030309;
+    font-family: "Montserrat", sans-serif;
 }
 
 .Content a {
     color: #cb1140;
     text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.Content p {
+    margin-bottom: 1.25rem;
+}
+
+hr {
+    background: url('/divider.png') no-repeat center center;
+    height: 100px;
+    width: 111px;
+    border: none;
+    margin: 0 auto 1.25rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    font-weight: 200;
+}
+
+h3 {
+    color: #281DF7;
+    font-size: 1.15rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 blockquote {

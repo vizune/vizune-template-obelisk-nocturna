@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     display: 'swap',
     families: {
       Forum: true,
-      Kanit: {
+      Montserrat: {
         wght: [100, 200, 300, 400, 700],
         ital: [100, 200, 300, 400, 700]
       },

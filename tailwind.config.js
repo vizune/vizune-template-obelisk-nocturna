@@ -11,7 +11,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'header': "url('/header-long.png')"
+        'header': "url('/header-long.png')",
+        'title': "url('/title.png')"
       },
       colors: {
         'midnight': '#020006',
@@ -19,12 +20,12 @@ export default {
         'ocean': '#90c2f5',
         'carmine': '#cb1140',
         'peach': '#ffac85',
-        'purple': '#655CF9',
+        'purple': '#281DF7',
         'ice': '#bbffff',
         'white': '#f2f2f2'
       },
       fontFamily: {
-        kanit: ['"Kanit"', "sans-serif"],
+        montserrat: ['"Montserrat"', "sans-serif"],
         forum: ['"Forum"', "serif"]
       },
     },
