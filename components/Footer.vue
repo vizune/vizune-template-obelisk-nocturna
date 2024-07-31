@@ -10,8 +10,12 @@
                     </div>
                     <!-- END CBOX -->	
                 </FooterWidget>
-                <FooterWidget heading="Affiliates">
+                <FooterWidget heading="Affiliates" class="Footer-widget">
                     <FooterAffiliates />
+                    <div class="flex flex-col gap-4 font-forum text-xl px-6">
+                        <NuxtLink to="/credits/links" class="text-ice underline">Link exchange ></NuxtLink>
+                        <NuxtLink to="/credits/about" class="text-ice underline">Credits & Resources ></NuxtLink>
+                    </div>
                 </FooterWidget>
             </div>
             
