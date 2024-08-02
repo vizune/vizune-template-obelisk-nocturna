@@ -13,7 +13,7 @@ const props = defineProps({
 
 <style scoped>
 h1 {
-    background: url('/title.png') center top no-repeat;
+    background: url('/title.webp') center top no-repeat;
     background-size: 100% 100%;
     display: flex;
     flex-direction: column;

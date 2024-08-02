@@ -10,9 +10,6 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'title': "url('/title.webp')"
-      },
       colors: {
         'midnight': '#020006',
         'charcoal': '#030309',
