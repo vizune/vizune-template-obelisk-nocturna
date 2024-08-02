@@ -11,15 +11,17 @@ const scrollToHeader = () => {
 <template>
     <div class="flex flex-wrap justify-center relative mx-auto h-[500px] w-full overflow-hidden" ref="header">
       <div class="relative w-full">
-        <NuxtImg 
-          format="webp" 
-          role="presentation" 
-          preload
-          height="500" 
-          width="1920" 
-          class="h-[500px] object-cover object-[10%] xl:object-center" 
-          src="/header-long.png"
-        />
+        <picture>
+          <source media="(max-width: 640px)" srcset="/header-xs.webp" />
+          <source media="(max-width: 1024px)" srcset="/header-md.webp" />
+          <source media="(max-width: 1280px)" srcset="/header-lg.webp" />
+          <img 
+            src="/header-long.webp"
+            role="presentation"
+            class="h-[500px] object-cover object-[10%] xl:object-center"
+          />
+        </picture>
+
         <svg 
           class="lg:cursor-pointer absolute top-1/4 lg:top-1/2" 
           xmlns="http://www.w3.org/2000/svg" 
