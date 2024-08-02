@@ -13,9 +13,7 @@
   <div>
     <IconSprite />
     <div class="h-screen flex flex-col justify-between">
-      <div class="grow-1">
         <HeadingIntro>Obelisk: Nocturna</HeadingIntro>
-      </div>
       <Header />
     </div>
     <Navigation />
