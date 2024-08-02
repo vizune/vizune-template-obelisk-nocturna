@@ -14,7 +14,7 @@ const scrollToHeader = () => {
         <NuxtImg 
           format="webp" 
           role="presentation" 
-          loading="lazy"
+          preload
           height="500" 
           width="1920" 
           class="h-[500px] object-cover object-[10%] xl:object-center" 
