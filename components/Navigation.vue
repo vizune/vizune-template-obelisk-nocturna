@@ -63,7 +63,7 @@ $link-glow: #90c2f5;
 
         &:before {
             content: '';
-            background: url('/orb.png') center left no-repeat;
+            background: url('/orb.webp') center left no-repeat;
             width: 100%;
             height: 100%;
             position: absolute;

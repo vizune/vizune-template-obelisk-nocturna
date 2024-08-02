@@ -11,7 +11,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'title': "url('/title.png')"
+        'title': "url('/title.webp')"
       },
       colors: {
         'midnight': '#020006',

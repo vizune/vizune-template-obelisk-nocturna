@@ -19,6 +19,8 @@ const scrollToHeader = () => {
             src="/header-long.webp"
             role="presentation"
             class="h-[500px] object-cover object-[10%] xl:object-center"
+            width="1920"
+            height="500"
           />
         </picture>
 
