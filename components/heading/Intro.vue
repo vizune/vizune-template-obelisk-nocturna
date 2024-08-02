@@ -1,8 +1,20 @@
 <template>
     <span class="font-forum uppercase text-4xl block text-center tracking-wider leading-[0] text-white">
-        <img src="/arch.svg" class="mx-auto" width="300" />
-        <slot />
-        <img src="/arch.svg" class="mx-auto rotate-180 origin-center -translate-x-[6px]" width="300" />
+      <NuxtImg
+        src="/arch.svg"
+        width="300"
+        height="214"
+        role="presentation"
+        class="mx-auto"
+      />
+      <slot />
+      <NuxtImg
+        src="/arch.svg"
+        width="300"
+        height="214"
+        role="presentation"
+        class="mx-auto rotate-180 origin-center -translate-x-[6px]"
+      />
     </span>
 </template>
 

@@ -3,7 +3,10 @@
     title: 'Vizune.com',
     meta: [
       { name: 'description', content: 'Vizune.com' }
-    ]
+    ],
+    htmlAttrs: {
+      lang: 'en'
+    }
   })
 </script>
 <template>

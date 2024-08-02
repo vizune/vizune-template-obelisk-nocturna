@@ -1,14 +1,14 @@
 <script setup lang="ts">
 const affiliates = [
     {
-        name: 'Affelius',
-        url: 'https://affeli.us/',
-        button: '/buttons/affelius.png'
-    },
-    {
         name: 'Aestharis',
         url: 'https://aestharis.net/',
         button: '/buttons/aestharis.png'
+    },
+    {
+        name: 'Affelius',
+        url: 'https://affeli.us/',
+        button: '/buttons/affelius.png'
     },
     {
         name: 'A Glimpsed Horizon',
@@ -77,11 +77,13 @@ const affiliates = [
             class="flex items-center justify-center relative border border-ocean h-[39px] w-[96px] text-center text-midnight hover:bg-ocean"
         >
             <span class="text-xs uppercase tracking-wider p-1">{{ link.name }}</span>
-            <img 
-                :src="link.button" 
+            <NuxtImg 
+                format="webp" 
                 :alt="`Affiliate: ${link.name} button`" 
+                :src="link.button" 
+                loading="lazy"
                 width="88"
-                height="31" 
+                height="31"
                 class="absolute top-[3px] left-[3px]"
             />
         </a>
