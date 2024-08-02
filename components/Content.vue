@@ -2,8 +2,20 @@
     <main class="Content container mx-auto pb-[3.5rem]">
         <div class="bg-white p-1 mx-4">
             <div class="Corners-top">
-                <NuxtImg format="webp" width="150" height="150" src="/floral-corner.png" />
-                <NuxtImg format="webp" width="150" height="150" src="/floral-corner.png" />
+                <NuxtImg 
+                    format="webp" 
+                    width="150" 
+                    height="150" 
+                    src="/floral-corner.png" 
+                    role="presentation" 
+                />
+                <NuxtImg 
+                    format="webp" 
+                    width="150"
+                    height="150" 
+                    src="/floral-corner.png" 
+                    role="presentation" 
+                />
             </div>
             <div class="border-4 border-midnight flex flex-col justify-between py-[4rem] md:py-6 md:pb-[8rem]">
                 <div class="px-6 md:px-[4rem] xl:px-[8rem] py-6 grow-1">
@@ -11,8 +23,20 @@
                 </div> 
             </div>
             <div class="Corners-bottom">
-                <NuxtImg format="webp" width="150" height="150" src="/floral-corner.png" />
-                <NuxtImg format="webp" width="150" height="150" src="/floral-corner.png" />
+                <NuxtImg 
+                    format="webp" 
+                    width="150" 
+                    height="150" 
+                    src="/floral-corner.png" 
+                    role="presentation" 
+                />
+                <NuxtImg 
+                    format="webp"
+                    width="150"
+                    height="150"
+                    src="/floral-corner.png"
+                    role="presentation" 
+                />
             </div>
         </div>
     </main>
@@ -20,7 +44,7 @@
 
 <style lang="scss" scoped>
 $corner-size: 150px;
-$corner-offset: 2px;
+$corner-offset: 1px;
 
 .Corners {
     &-top {

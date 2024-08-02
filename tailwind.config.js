@@ -11,7 +11,6 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'header': "url('/footer-bg.jpg')",
         'title': "url('/title.png')"
       },
       colors: {
