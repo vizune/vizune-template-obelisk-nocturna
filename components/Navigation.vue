@@ -32,16 +32,18 @@ const nav = [
 </script>
 
 <template>
-    <div class="container mx-auto px-4 py-[3.5rem]">
-        <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4 xl:gap-0">
+    <div class="lg:container mx-auto py-8 xl:py-[3.5rem] overflow-hidden">
+        <div class="mx-4">
+        <ul class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4 xl:gap-0">
             <li v-for="link in nav" class="flex items-center">
                 <NuxtLink 
                     :to="link.url" 
-                    class="NavLink w-full h-full flex items-center xl:justify-center font-forum text-ice text-xl lg:text-2xl uppercase tracking-wider border border-ocean xl:border-none py-4 px-6 xl:px-0">
+                    class="NavLink w-full h-full flex items-center xl:justify-center font-forum text-ice text-xl lg:text-2xl uppercase tracking-wider pl-8 xl:pl-0">
                     <span v-html="link.name" />
                 </NuxtLink>
             </li>
-        </ul>  
+        </ul> 
+    </div>
     </div>
 </template>
 
@@ -61,26 +63,27 @@ $link-glow: #90c2f5;
 
         &:before {
             content: '';
-            background: url('/orb.png') center center no-repeat;
+            background: url('/orb.png') center left no-repeat;
             width: 100%;
             height: 100%;
             position: absolute;
-            opacity: 0;
             background-size: 20px;
-            transform: translateX(30px);
+            transform: translateX(-2rem);
             transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) .5s, opacity ease-in-out .25s;
         }
 
         &:hover {
             &:before {
-                opacity: 1;
-                transform: translateX(50px);
+                transform: translateX(-1.4rem);
             }
         }
 
         @media (min-width: 1280px) {
+
             &:before {
                 content: '';
+                background-position: center center;
+                opacity: 0;
                 transform: translateY(15px);
                 transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) .5s, opacity ease-in-out .25s;
             }
