@@ -2,7 +2,7 @@
 const nav = [
     {
         name: 'Home',
-        url: ''
+        url: '/'
     },
     {
         name: 'About',
@@ -53,12 +53,12 @@ $link-glow: #90c2f5;
 .NavLink {
     position: relative;
 
-    &:not([href]) {
+    &[aria-current="page"] {
         color: white;
         text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px $link-glow, 0 0 20px $link-glow, 0 0 20px $link-glow, 0 0 20px $link-glow, 0 0 70px $link-glow;
     }
 
-    &[href] {
+    &:not([aria-current="page"]) {
         position: relative;
 
         &:before {
