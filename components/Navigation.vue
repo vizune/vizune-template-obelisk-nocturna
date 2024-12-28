@@ -37,17 +37,17 @@ const nav = [
 
 <template>
     <div class="lg:container mx-auto py-8 xl:py-[3.5rem] overflow-hidden">
-        <div class="mx-4">
-        <ul class="flex flex-wrap xl:justify-between md:px-6">
-            <li v-for="link in nav" class="flex items-center justify-center p-4 w-2/4 sm:w-1/3 md:w-1/4 lg:w-1/5 lg:w-auto">
-                <NuxtLink 
-                    :to="link.url" 
-                    class="NavLink w-full h-full flex items-center text-ice text-xl uppercase tracking-wider pl-8 xl:pl-0">
-                    <span v-html="link.name" />
-                </NuxtLink>
-            </li>
-        </ul> 
-    </div>
+        <div class="md:mx-4">
+            <ul class="flex flex-wrap xl:justify-between md:px-6">
+                <li v-for="link in nav" class="flex items-center justify-center p-4 w-2/4 sm:w-1/3 md:w-1/4 lg:w-1/5 lg:w-auto">
+                    <NuxtLink 
+                        :to="link.url" 
+                        class="NavLink w-full h-full flex items-center text-ice text-xl uppercase tracking-wider pl-8 xl:pl-0">
+                        <span v-html="link.name" />
+                    </NuxtLink>
+                </li>
+            </ul> 
+        </div>
     </div>
 </template>
 
