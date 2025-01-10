@@ -4,35 +4,35 @@
             <div class="Corners-top">
                 <NuxtImg 
                     format="webp" 
-                    width="150" 
+                    width="149" 
                     height="150" 
                     src="/floral-corner.png" 
                     role="presentation" 
                 />
                 <NuxtImg 
                     format="webp" 
-                    width="150"
+                    width="149"
                     height="150" 
                     src="/floral-corner.png" 
                     role="presentation" 
                 />
             </div>
             <div class="border-4 border-midnight flex flex-col justify-between py-[4rem] md:py-6 md:pb-[8rem]">
-                <div class="px-6 md:px-[4rem] xl:px-[8rem] pt-6 pb-[4rem] grow-1">
+                <div class="px-4 md:px-[4rem] xl:px-[8rem] pt-6 pb-[4rem] grow-1">
                     <slot />
                 </div> 
             </div>
             <div class="Corners-bottom">
                 <NuxtImg 
                     format="webp" 
-                    width="150" 
+                    width="149" 
                     height="150" 
                     src="/floral-corner.png" 
                     role="presentation" 
                 />
                 <NuxtImg 
                     format="webp"
-                    width="150"
+                    width="149"
                     height="150"
                     src="/floral-corner.png"
                     role="presentation" 
@@ -43,7 +43,8 @@
 </template>
 
 <style lang="scss" scoped>
-$corner-size: 150px;
+$corner-height: 150px;
+$corner-width: 149px;
 $corner-offset: 1px;
 
 .Corners {
@@ -55,8 +56,8 @@ $corner-offset: 1px;
             position: absolute;
             top: $corner-offset;
             left: $corner-offset;
-            height: $corner-size;
-            width: $corner-size;
+            height: $corner-height;
+            width: $corner-width;
         }
 
         > *:last-child {
@@ -64,8 +65,8 @@ $corner-offset: 1px;
             position: absolute;
             top: $corner-offset;
             right: $corner-offset;
-            height: $corner-size;
-            width: $corner-size;
+            height: $corner-height;
+            width: $corner-width;
             transform: rotate(90deg);
         }
     }
@@ -78,8 +79,8 @@ $corner-offset: 1px;
             position: absolute;
             bottom: $corner-offset;
             left: $corner-offset;
-            height: $corner-size;
-            width: $corner-size;
+            height: $corner-height;
+            width: $corner-width;
             transform: rotate(-90deg);
         }
 
@@ -87,8 +88,8 @@ $corner-offset: 1px;
             position: absolute;
             bottom: $corner-offset;
             right: $corner-offset;
-            height: $corner-size;
-            width: $corner-size;
+            height: $corner-height;
+            width: $corner-width;
             transform: rotate(180deg);
         }
     }
