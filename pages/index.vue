@@ -1,7 +1,11 @@
 <template>
     <div>
         <Content>
-            <HeadingTitle small="Obelisk: Nocturna. Welcome to" large="Vizune" />
+            <ArticleHeader
+                category="Obelisk: Nocturna"
+                title="Welcome to Vizune"
+                description="A creative hub where anime, gaming, design and web development merge."
+            />
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis nec <a href="">orci et aliquet</a>. Curabitur augue leo, elementum sit amet leo eu, volutpat varius sapien. Suspendisse potenti. Nam in risus venenatis, efficitur leo id, pellentesque metus. Aliquam erat volutpat. Sed mattis, tortor id cursus vulputate, orci ex sollicitudin elit, vel tempor velit ex id dolor. Integer ornare vulputate libero, ut sodales tellus posuere id. Pellentesque bibendum nisi a risus viverra cursus.</p>
             <hr />
             <h2>Heading two</h2>
@@ -22,6 +26,11 @@
                     </ul>
                 </li>
             </ul>
+            <h3>Pagination styling</h3>
+            <PostPagination
+                :prev="{ title: 'Midnight Sanctuary', url: '/blog/midnight-sanctuary' }"
+                :next="{ title: 'Luna\'s Colour Theory', url: '/blog/lunas-colour-theory' }"
+            />
             <p class="text-center pt-6">
                 <NuxtLink to="/templates" class="Btn">Explore the site <span aria-hidden="true">›</span></NuxtLink>
             </p>

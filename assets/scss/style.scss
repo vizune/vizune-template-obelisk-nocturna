@@ -115,13 +115,26 @@ body::after {
         }
     }
 
+    p,
+    li {
+        /* Avoid a single word left alone on the last line (a widow) */
+        text-wrap: pretty;
+    }
+
     p {
         margin-bottom: 1.25rem;
     }
 
+    h2,
+    h3 {
+        text-wrap: balance;
+    }
+
+    /* Divider: the traced flourish SVG, coloured from CSS */
     hr {
-        background: url('/divider.png') no-repeat center center;
-        background-size: contain;
+        background: var(--midnight);
+        -webkit-mask: url('/divider.svg') center / contain no-repeat;
+        mask: url('/divider.svg') center / contain no-repeat;
         height: 70px;
         width: 78px;
         border: none;
