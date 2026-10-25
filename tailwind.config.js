@@ -14,15 +14,16 @@ export default {
         'midnight': '#020006',
         'charcoal': '#030309',
         'ocean': '#90c2f5',
-        'carmine': '#cb1140',
+        'carmine': '#9e3a72',
         'peach': '#ffac85',
-        'purple': '#281DF7',
+        'purple': '#4b3aa8',
         'ice': '#bbffff',
         'white': '#f2f2f2'
       },
       fontFamily: {
-        montserrat: ['"Montserrat"', "sans-serif"],
-        forum: ['"Forum"', "serif"]
+        body: ['"Mulish"', "system-ui", "sans-serif"],
+        display: ['"Cormorant Garamond"', "Georgia", "serif"],
+        logo: ['"Forum"', "Georgia", "serif"]
       },
     },
   },

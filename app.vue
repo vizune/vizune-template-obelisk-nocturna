@@ -16,5 +16,6 @@
     <Navigation />
     <nuxt-page />
     <Footer />
+    <Chatbox />
   </div>
 </template>

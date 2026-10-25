@@ -12,11 +12,16 @@ export default defineNuxtConfig({
   googleFonts: {
     display: 'swap',
     families: {
-      Forum: true,
-      Montserrat: {
-        wght: [100, 200, 300, 400, 700],
-        ital: [100, 200, 300, 400, 700]
+      Mulish: {
+        wght: [400, 700],
+        ital: [400]
       },
+      'Cormorant+Garamond': {
+        wght: [500, 600],
+        ital: [500]
+      },
+      // Only used for the "Vizune" lettering in the header, to match the logo
+      Forum: true,
     }
   },
   postcss: {

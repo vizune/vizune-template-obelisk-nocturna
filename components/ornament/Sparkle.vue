@@ -1,0 +1,14 @@
+<template>
+    <svg class="Sparkle" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M12 0c.6 6.6 2.4 9.4 12 12-9.6 2.6-11.4 5.4-12 12-.6-6.6-2.4-9.4-12-12 9.6-2.6 11.4-5.4 12-12z" />
+    </svg>
+</template>
+
+<style scoped>
+.Sparkle {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    flex-shrink: 0;
+}
+</style>
