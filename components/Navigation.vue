@@ -18,6 +18,8 @@ const open = ref(false)
 <template>
     <nav class="Nav" aria-label="Main">
         <div class="Nav-bar">
+            <span class="Nav-cap Nav-cap--left" aria-hidden="true" />
+            <span class="Nav-chain Nav-chain--left" aria-hidden="true" />
             <span class="Nav-end Nav-end--left" aria-hidden="true">
                 <OrnamentMoon class="Nav-moon" />
             </span>
@@ -45,6 +47,8 @@ const open = ref(false)
             <span class="Nav-end Nav-end--right" aria-hidden="true">
                 <OrnamentMoon class="Nav-moon Nav-moon--flip" />
             </span>
+            <span class="Nav-chain Nav-chain--right" aria-hidden="true" />
+            <span class="Nav-cap Nav-cap--right" aria-hidden="true" />
         </div>
     </nav>
 </template>
@@ -57,31 +61,87 @@ const open = ref(false)
     margin-top: -1.5rem;
 }
 
+/*
+ * The bar is framed by two ornamental end caps (public/nav-cap.svg) whose
+ * rails continue as the bar's top and bottom lines.
+ * Measurements from the SVG (834 x 510 units): each rail is 14 units thick,
+ * its outer edges sit 21.5 units in from the top and bottom, and the straight
+ * rail stub at the inner end is about 60 units long.
+ */
 .Nav-bar {
+    --bar-h: 4.25rem;                              /* rail-to-rail height */
+    --cap-h: calc(var(--bar-h) * 510 / 467);       /* full ornament height */
+    --cap-w: calc(var(--cap-h) * 834 / 510);
+    --rail: calc(var(--cap-h) * 14 / 510);
+    --line: #8577b5; /* solid soft lavender, so the cap and rail overlap doesn't show */
+
     position: relative;
-    max-width: 1180px;
+    max-width: 1260px;
+    height: var(--bar-h);
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 1rem;
-    padding: .35rem 1.25rem;
-    background: linear-gradient(180deg, rgba(22, 16, 54, .92), rgba(9, 7, 26, .96));
-    border: 1px solid rgba(201, 184, 255, .35);
-    box-shadow:
-        inset 0 0 0 3px rgba(9, 7, 26, .9),
-        inset 0 0 0 4px rgba(201, 184, 255, .18),
-        0 10px 40px rgba(0, 0, 0, .6),
-        0 0 30px rgba(123, 92, 255, .18);
+    padding: 0 calc(var(--cap-w) * .92);
 }
 
-/* Moon ornaments + hanging chains at each end */
+/* Background and rails between the caps */
+.Nav-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(var(--cap-w) - var(--cap-w) * 60 / 834);
+    right: calc(var(--cap-w) - var(--cap-w) * 60 / 834);
+    z-index: -1;
+    border-top: var(--rail) solid var(--line);
+    border-bottom: var(--rail) solid var(--line);
+    background: linear-gradient(180deg, rgba(22, 16, 54, .92), rgba(9, 7, 26, .96));
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .6), 0 0 30px rgba(123, 92, 255, .18);
+}
+
+.Nav-cap {
+    position: absolute;
+    top: calc(var(--cap-h) * -21.5 / 510);
+    width: var(--cap-w);
+    height: var(--cap-h);
+    background: var(--line);
+    -webkit-mask: url('/nav-cap.svg') center / 100% 100% no-repeat;
+    mask: url('/nav-cap.svg') center / 100% 100% no-repeat;
+    pointer-events: none;
+}
+
+.Nav-cap--left {
+    left: 0;
+}
+
+.Nav-cap--right {
+    right: 0;
+    transform: scaleX(-1);
+}
+
+/* Crescent moons just inside the bar where the caps end */
 .Nav-end {
-    position: relative;
+    position: absolute;
+    top: 50%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: -.75rem;
     color: var(--lavender);
     filter: drop-shadow(0 0 6px rgba(201, 184, 255, .8));
+    pointer-events: none;
+}
+
+.Nav-end--left {
+    left: calc(var(--cap-w) + .1rem);
+}
+
+.Nav-end--right {
+    right: calc(var(--cap-w) + .1rem);
 }
 
 .Nav-moon {
@@ -92,21 +152,38 @@ const open = ref(false)
     transform: scaleX(-1);
 }
 
-.Nav-end::after {
+/* Chains with a gem, hanging from the outer tips of the caps */
+.Nav-chain {
+    position: absolute;
+    top: calc(50% + .5rem);
+    width: 9px;
+    height: calc(3.25rem + 16px);
+    pointer-events: none;
+}
+
+.Nav-chain--left {
+    left: calc(.15rem - 4px);
+}
+
+.Nav-chain--right {
+    right: calc(.15rem - 4px);
+}
+
+.Nav-chain::after {
     content: '';
     position: absolute;
-    top: calc(100% + .9rem);
-    left: 50%;
+    top: 0;
+    left: 4px;
     width: 1px;
     height: 3.25rem;
     background: repeating-linear-gradient(180deg, rgba(201, 184, 255, .7) 0 2px, transparent 2px 5px);
 }
 
-.Nav-end::before {
+.Nav-chain::before {
     content: '';
     position: absolute;
-    top: calc(100% + 4.15rem);
-    left: calc(50% - 4px);
+    top: 3.25rem;
+    left: 0;
     width: 9px;
     height: 13px;
     background: linear-gradient(160deg, #fff, var(--lavender) 40%, var(--violet));
@@ -126,10 +203,10 @@ const open = ref(false)
     display: flex;
     align-items: center;
     gap: .45rem;
-    padding: 1rem clamp(.5rem, 1.1vw, 1.1rem);
+    padding: 1rem clamp(.55rem, 1.2vw, 1.2rem);
     font-family: var(--font-display);
-    font-size: 1.1rem;
-    letter-spacing: .12em;
+    font-size: 1rem;
+    letter-spacing: .1em;
     white-space: nowrap;
     text-transform: uppercase;
     color: #cfc6f5;
@@ -232,8 +309,8 @@ const open = ref(false)
 /* Mid-size screens: tighten so all nine links fit on one line */
 @media (max-width: 1320px) {
     .Nav-link {
-        font-size: .98rem;
-        letter-spacing: .08em;
+        font-size: .92rem;
+        letter-spacing: .07em;
         padding-left: clamp(.4rem, .8vw, .8rem);
         padding-right: clamp(.4rem, .8vw, .8rem);
     }
@@ -249,13 +326,27 @@ const open = ref(false)
     }
 
     .Nav-bar {
-        flex-wrap: wrap;
-        padding: .25rem 1rem;
+        --bar-h: 3.5rem;
     }
 
-    .Nav-end::before,
-    .Nav-end::after {
-        display: none;
+    .Nav-end {
+        width: 1.2rem;
+        margin-top: -.6rem;
+    }
+
+    .Nav-end--left { left: calc(var(--cap-w) + .05rem); }
+    .Nav-end--right { right: calc(var(--cap-w) + .05rem); }
+
+    .Nav-moon {
+        font-size: 1.05rem;
+    }
+
+    .Nav-chain::after {
+        height: 2.25rem;
+    }
+
+    .Nav-chain::before {
+        top: 2.25rem;
     }
 
     .Nav-toggle {
@@ -280,13 +371,18 @@ const open = ref(false)
         transform: rotate(45deg);
     }
 
+    /* Open menu drops down as a panel under the railed bar */
     .Nav-list {
-        order: 3;
-        flex-basis: 100%;
+        position: absolute;
+        top: calc(100% + .5rem);
+        left: calc(var(--cap-w) * .45);
+        right: calc(var(--cap-w) * .45);
         display: none;
         grid-template-columns: 1fr 1fr;
-        border-top: 1px solid rgba(201, 184, 255, .2);
-        padding: .5rem 0 .75rem;
+        padding: .5rem .5rem .9rem;
+        background: linear-gradient(180deg, #161036, #09071a);
+        border: 1px solid rgba(201, 184, 255, .35);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, .6);
     }
 
     .Nav-list.is-open {
