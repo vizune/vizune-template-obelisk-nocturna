@@ -92,10 +92,11 @@ const items = [
     background-repeat: no-repeat;
 }
 
-.Card:hover {
+.Card:hover,
+.Card:focus-within {
     transform: translateY(-4px);
-    border-color: rgba(201, 184, 255, .6);
-    box-shadow: 0 0 30px rgba(123, 92, 255, .35);
+    border-color: rgba(201, 184, 255, .7);
+    box-shadow: 0 0 0 1px rgba(201, 184, 255, .25), 0 0 34px rgba(167, 139, 255, .45), 0 0 80px rgba(123, 92, 255, .2);
 }
 
 .Card-link {
@@ -127,17 +128,18 @@ const items = [
     display: flex;
     flex-direction: column;
     flex: 1;
-    padding: 1.1rem .6rem .5rem;
+    padding: 1.35rem 1rem .85rem;
 }
 
 .Card-kicker {
     display: flex;
     align-items: center;
     gap: .5rem;
-    font-size: .65rem;
-    letter-spacing: .3em;
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .26em;
     text-transform: uppercase;
-    color: var(--lavender-dim);
+    color: #f2a7d0;
 }
 
 .Card-star {
@@ -147,19 +149,19 @@ const items = [
 }
 
 .Card-title {
-    margin-top: .35rem;
     font-family: var(--font-display);
     font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 1.2;
-    color: #e6dcff;
+    margin-top: .45rem;
+    font-size: 1.75rem;
+    line-height: 1.15;
+    color: #efe8ff;
 }
 
 .Card-text {
-    margin-top: .5rem;
-    font-size: .85rem;
+    margin-top: .65rem;
+    font-size: .9rem;
     line-height: 1.65;
-    color: #bdb6d9;
+    color: #b3abd3;
     flex: 1;
 }
 

@@ -59,8 +59,8 @@ const network = [
 /* Portrait in a glowing double ring with a slowly turning dotted halo */
 .About-portrait {
     position: relative;
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
     flex-shrink: 0;
 }
 
