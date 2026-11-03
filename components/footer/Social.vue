@@ -62,9 +62,7 @@ const social = [
                     :style="{ '--angle': `${(360 / social.length) * i - 90}deg` }"
                 >
                     <a :href="item.url" target="_blank" rel="noopener" :title="item.name" :aria-label="item.name">
-                        <svg aria-hidden="true">
-                            <use :xlink:href="`#${item.icon}`"></use>
-                        </svg>
+                        <i :class="['fa-brands', `fa-${item.icon}`]" aria-hidden="true" />
                     </a>
                 </li>
             </ul>
@@ -167,9 +165,8 @@ const social = [
     transition: color .25s ease, border-color .25s ease, box-shadow .25s ease, transform .25s ease;
 }
 
-.Social-icons svg {
-    width: 1.15rem;
-    height: 1.15rem;
+.Social-icons i {
+    font-size: 1.15rem;
 }
 
 .Social-icons a:hover,

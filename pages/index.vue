@@ -11,7 +11,7 @@
             <h2>Heading two</h2>
             <p>Quisque id dolor vehicula, commodo eros vitae, eleifend nulla. Quisque vitae ornare leo. Aenean pretium augue eu fringilla fermentum. Nunc pulvinar est id tellus fermentum, id dignissim erat imperdiet. Nullam maximus nisl velit, sed hendrerit nibh condimentum quis. Duis elementum non elit mattis fermentum. Pellentesque ipsum nibh, dignissim ut felis ut, euismod eleifend tellus.</p>
             <h3>Blockquote styling</h3>
-            <blockquote class="font-display">
+            <blockquote>
                 <p>Obelisk: Nocturna is best viewed with the curtains closed, lights off and listening to <a href="https://open.spotify.com/track/2SHzX7kPO4SBmBGsqnH6nN?si=2f81be5c66154553" target="_blank">"Luma" by The M Machine.</a></p>
                 <span>Sasha, <cite>Vizune.com</cite></span>
             </blockquote>
@@ -31,7 +31,7 @@
                 :prev="{ title: 'Midnight Sanctuary', url: '/blog/midnight-sanctuary' }"
                 :next="{ title: 'Luna\'s Colour Theory', url: '/blog/lunas-colour-theory' }"
             />
-            <p class="text-center pt-6">
+            <p class="Home-cta">
                 <NuxtLink to="/templates" class="Btn">Explore the site <span aria-hidden="true">›</span></NuxtLink>
             </p>
         </Content>
@@ -42,3 +42,10 @@
         </section>
     </div>
 </template>
+
+<style scoped>
+.Home-cta {
+    padding-top: 1.5rem;
+    text-align: center;
+}
+</style>

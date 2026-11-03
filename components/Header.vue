@@ -1,20 +1,20 @@
 <template>
-  <div class="flex flex-wrap justify-center relative mx-auto h-[500px] w-full overflow-hidden" ref="header">
-    <div class="flex justify-center relative w-full">
+  <div class="Header" ref="header">
+    <div class="Header-inner">
       <picture>
         <source media="(max-width: 640px)" srcset="/header-xs.webp" />
         <source media="(max-width: 1024px)" srcset="/header-md.webp" />
         <source media="(max-width: 1280px)" srcset="/header-lg.webp" />
-        <img 
+        <img
           src="/header-long.webp"
           role="presentation"
-          class="Header-img h-[500px] object-cover object-[10%] xl:object-center"
+          class="Header-img"
           width="1920"
           height="500"
         />
       </picture>
-      <HeadingIntro class="Header-logo absolute lg:top-[1rem] left-1/2 -translate-x-2/4">
-        <p class="text-[5rem] xl:text-[4rem]">
+      <HeadingIntro class="Header-logo">
+        <p>
           Vizune
         </p>
       </HeadingIntro>
@@ -24,6 +24,36 @@
 </template>
 
 <style scoped>
+.Header {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.Header-inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.Header-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 1024px) {
+  .Header-logo {
+    top: 1rem;
+  }
+}
+
 .Header-tagline {
   position: absolute;
   left: 50%;
@@ -62,6 +92,9 @@
 /* Fade the bottom of the banner into the page, and on wide screens
    (where the banner is narrower than the window) fade its sides too */
 .Header-img {
+  height: 500px;
+  object-fit: cover;
+  object-position: 10%;
   -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent 100%);
   mask-image: linear-gradient(180deg, #000 60%, transparent 100%);
 }
@@ -113,6 +146,7 @@ svg:hover {
 transform: scale(1.1) translate(-45%,-40%);
 }
 p {
+  font-size: 5rem;
   margin: .25rem 0 0;
   /* Extra letter-spacing for the logo lettering; the matching left padding keeps it centred
      (letter-spacing also adds space after the last letter) */
@@ -120,6 +154,12 @@ p {
   padding-left: .12em;
   -webkit-animation: glow 1.5s ease-in-out infinite alternate 1s;
   animation: glow 1.5s ease-in-out infinite alternate 1s;
+}
+
+@media (min-width: 1280px) {
+  p {
+    font-size: 4rem;
+  }
 }
 
 @keyframes glow {

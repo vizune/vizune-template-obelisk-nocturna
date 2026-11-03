@@ -11,7 +11,6 @@
 </script>
 <template>
   <div>
-    <IconSprite />
     <Header />
     <Navigation />
     <nuxt-page />

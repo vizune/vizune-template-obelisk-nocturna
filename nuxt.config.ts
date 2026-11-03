@@ -2,7 +2,13 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/google-fonts", "@nuxt/image"],
-  css: ['~/assets/scss/style.scss'],
+  css: [
+    // Font Awesome: core + the icon styles in use (add 'regular.min.css' if you need it)
+    '@fortawesome/fontawesome-free/css/fontawesome.min.css',
+    '@fortawesome/fontawesome-free/css/brands.min.css',
+    '@fortawesome/fontawesome-free/css/solid.min.css',
+    '~/assets/scss/style.scss',
+  ],
   components: [
     {
       path: '~/components',
@@ -26,7 +32,6 @@ export default defineNuxtConfig({
   },
   postcss: {
     plugins: {
-      tailwindcss: {},
       autoprefixer: {},
       cssnano:
         process.env.NODE_ENV === 'production'
